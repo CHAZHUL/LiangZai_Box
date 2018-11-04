@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   <style>
+    #box{
+        width: 100px;
+        height: 100px;
+        border: 4px solid black;
+        background-color:yellow;
+        border-radius: 100px;
+        margin-top: 5px;
+        margin-left: 5px;
+        
+    }
+   </style>
+   <script>
+       window.onload = function(){
+           var ball = document.getElementById("box")
+           var distance = 0
+           var leftdis = 0
+           setInterval(func,10)
+           num = 10
+           num1 = 6
+           function func (){
+               distance += num
+               leftdis += num1
+               if(distance > 580){
+                num = -10
+               }
+               if (distance < 0){
+                num = 10
+               }
+               if(leftdis > 1300){
+                num1 = -6
+               }
+               if (leftdis < 0){
+                num1 = 6
+               }
+               ball.style.marginTop = distance +"px"
+               ball.style.marginLeft = leftdis +"px"
+           }
+       
+       }
+   </script>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+</html>
